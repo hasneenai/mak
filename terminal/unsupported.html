@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser unsupported</title>
+    <script>'use strict';(function(){function c(){try{return((a=0)=>!!a)(1)}catch(a){return!1}}function d(){var a=document.createElement("canvas");try{return!(!window.WebGLRenderingContext||!a.getContext("webgl")&&!a.getContext("experimental-webgl"))}catch(f){return!1}}var e=window;try{var b=!!window.crypto}catch(a){b=!1}if(b=b&&c()&&d())try{b=!!(1n+BigInt(Math.ceil(Math.random()+.5)))}catch(a){b=!1}e.__supported=b})();</script>
+    <script>window.__supported && (window.stop&&window.stop(),window.open("/terminal","_self"));</script>
+</head>
+<body>
+    <style>
+        * {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+        html,
+        body {
+            height: 100%;
+            line-height: 1.5;
+            font-family: 'Trebuchet MS', sans-serif;
+            -webkit-text-size-adjust: 100%;
+            -webkit-font-smoothing: antialiased;
+            overscroll-behavior-x: none;
+            overflow: hidden;
+        }
+        svg {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+        a {
+            display: inline-block;
+            color: inherit;
+            text-decoration: none;
+        }
+        .wrapper {
+            height: 100%;
+            width: 100%;
+            text-align: center;
+            font-size: 0;
+            padding: 20px;
+        }
+        .wrapper:before {
+            content: '';
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
+        .content {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 14px;
+        }
+        .title {
+            font-size: 22px;
+            margin-bottom: 30px;
+        }
+        .text {
+            font-size: 15px;
+            margin-bottom: 16px;
+        }
+        .browsers {
+            margin-bottom: 32px;
+        }
+        .browser {
+            display: inline-block;
+            text-align: left;
+            width: 200px;
+            margin: 0 4px;
+            padding: 12px;
+            border: 1px solid #808080;
+            font-size: 0;
+        }
+        .browser:hover {
+            background-color: #f4f8fe;
+            text-decoration: none;
+            opacity: 0.9;
+        }
+        .browser-icon {
+            display: inline-block;
+            vertical-align: middle;
+            width: 40px;
+            height: 40px;
+            margin-right: 12px;
+            border: none;
+        }
+        .browser-text {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 14px;
+            color: #000;
+            cursor: pointer;
+        }
+        .secondary {
+            display: block;
+            color: #808080;
+        }
+    </style>
+    <div class="wrapper">
+        <div class="content">
+            <h1 class="title">Sorry, your browser is not supported</h1>
+            <p class="text">Install the latest version of one of these browsers</p>
+            <div class="browsers">
+                <a href="https://www.google.com/chrome/" target="_blank" class="browser">
+                    <img class="browser-icon" src="/terminal/images/chrome_128x128.png" alt="Google Chrome">
+                    <span class="browser-text">
+                        Chrome
+                        <span class="secondary">Google</span>
+                    </span>
+                </a>
+                <a href="https://www.microsoft.com/edge" target="_blank" class="browser">
+                    <img class="browser-icon" src="/terminal/images/edge_128x128.png" alt="Microsoft Edge">
+                    <span class="browser-text">
+                        Edge
+                        <span class="secondary">Microsoft Edge</span>
+                    </span>
+                </a>
+                <a href="https://www.mozilla.org/" target="_blank" class="browser">
+                    <img class="browser-icon" src="/terminal/images/firefox_128x128.png" alt="Mozilla Firefox">
+                    <span class="browser-text">
+                        Firefox
+                        <span class="secondary">Mozilla</span>
+                    </span>
+                </a>
+                <a href="https://www.opera.com/" target="_blank" class="browser">
+                    <img class="browser-icon" src="/terminal/images/opera_128x128.png" alt="Opera">
+                    <span class="browser-text">
+                        Opera
+                        <span class="secondary">Opera Software</span>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
